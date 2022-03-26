@@ -31,11 +31,11 @@ ActiveX控件通常通过VBA语言来控制，其类似一个待开发的Form co
 	.value：True/False 分别代表该按钮是否被选取；
 	.caption：给该按钮的显示添加描述；
 	.visible：True/False分别代表是否显示该按钮；
-  .enabled：True/False分别代表是否激活该按钮；
+  	.enabled：True/False分别代表是否激活该按钮；
   
-  6. Combo box
-  组合框，类似数据验证的用法。
-  可通过属性框或VBA语句设置数据验证的范围和单元格关联
-  .ListFillRange：输入数据范围，属性框的写法与VBA的写法一致，VBA需用双引号框住
-  .LinkedCell: 单元格关联，使得组合框中选中的值在某个单元格显示
-  .value/text: 可用来引用组合框选中的对象值
+  	6. Combo box
+  	组合框，类似数据验证的用法。
+  	可通过属性框或VBA语句设置数据验证的范围和单元格关联
+  	.ListFillRange：输入数据范围，属性框的写法与VBA的写法一致，VBA需用双引号框住，名称管理器里的数组名"name”，单元格范围引用"Sheet1！C2:C5"
+  	.LinkedCell: 单元格关联，使得组合框中选中的值在某个单元格显示
+  	.value/text: 可用来引用组合框选中的对象值
