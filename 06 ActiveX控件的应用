@@ -1,0 +1,41 @@
+ActiveX控件通常通过VBA语言来控制，其类似一个待开发的Form control，需要我们自行根据需要来编写操作代码。
+对于ActiveX控件的属性设置，需要在"Design Mode"（设计模式）激活的条件下进行更改，而ActiveX控件的属性查看可通过"Properties"按钮打开控件的属性栏。
+	1. Command Button
+	与“事件”的联用，实现点击按钮，激发相关事件；
+	即可通过代码更改（多次一举），也可通过属性框更改相关设置（更加方便和友好）
+	.caption：给该按钮的显示添加描述；
+	
+	2. Spin Button
+	通过VBA或者属性框，可以设定变化的数字范围（Min和Max），设定每次变化的间隔（smallchange);
+	同时，该按钮本身会记录每一次“点击”所代表的“value”，结合该Value可以实现“换页”功能；
+	.Mix/Max：设置最小/最大的范围区间；
+	.smallchange：设置每次点击的变化步长；
+	.value：设置按钮的初始值或者记录每次点击引起的改变所记录的对应值；
+	
+	3. Label （标签）
+	仅用来显示“信息”用，可通过VBA或者属性框，来编写其框内展示的位置，利用.caption引用到对应的单元格范围，显示单元格的值是较为常用的用法；
+	.visible： True/False 分别设置其可见性；
+	.caption：描述标签框内需显示的内容；
+	
+	4. Option button
+	选择按钮，通过点击，表明你对该选项的选取，可通过VBA和属性框设置其参数，包括：
+	.groupname：给不同的optionbutton设置相同的“组名”，形成一个互斥的按钮组（单一选项）；
+	.value：True/False 分别代表该按钮是否被选取；
+	.caption：给该按钮的显示添加描述；
+	.visible：True/False分别代表是否显示该按钮；
+	.enabled：True/False分别代表是否激活该按钮；
+
+	5. Check box
+	与Option button的属性和用法几乎相同，但不能实现单一选项的选取功能。
+	.groupname：给不同的check box设置相同的“组名”，但不能形成一个互斥的选项组；
+	.value：True/False 分别代表该按钮是否被选取；
+	.caption：给该按钮的显示添加描述；
+	.visible：True/False分别代表是否显示该按钮；
+  .enabled：True/False分别代表是否激活该按钮；
+  
+  6. Combo box
+  组合框，类似数据验证的用法。
+  可通过属性框或VBA语句设置数据验证的范围和单元格关联
+  .ListFillRange：输入数据范围，属性框的写法与VBA的写法一致，VBA需用双引号框住
+  .LinkedCell: 单元格关联，使得组合框中选中的值在某个单元格显示
+  .value/text: 可用来引用组合框选中的对象值
